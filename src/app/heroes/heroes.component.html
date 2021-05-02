@@ -1,0 +1,38 @@
+<h1>My Roomies</h1>
+
+<!-- <input placeholder = "hero name" [(ngModel)] = "names"/> -->
+<input type = "text" [(ngModel)]="searchTerm" placeholder="search text goes here"  />
+
+<!-- <form action="search">
+  <label for="search">Search Room List:</label>
+  <input type="search" id="search" name="search">
+  <input type="submit">
+</form> -->
+
+<table>
+  <tr>
+    <th>id</th>
+
+    <th>name</th>
+
+    <th>rent</th>
+  </tr>
+  <tr *ngFor = "let  name of names | filter: searchTerm">
+    <td>{{name.id}}</td>
+
+    <td>{{name.name |uppercase}}</td>
+
+    <td>{{name.rent |currency}}</td>
+
+    <td> {{ newTask }}</td>
+  </tr>
+</table>
+
+<!-- <ul *ngFor = "let  name of names" >
+
+  <li>
+
+    {{name.id}} {{name.name |uppercase}} {{name.rent |currency}}
+
+  </li></ul> -->
+  <app-add-newroomies (childEvent) = "newTask=$event" ></app-add-newroomies>

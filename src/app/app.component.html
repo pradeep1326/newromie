@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+<!-- // property binding -->
+<!-- data moves from component to html -->
+<label [title] = 'title'>Mylabel</label>
+
+<!-- event binding -->
+<!-- data moves from html to component -->
+
+<div (click) = 'changeTitle()'> Event Binding </div>
+
+<!-- two way binding or Banana in the box-->
+<!-- data moves from coponent to html and viseversa -->
+
+
+<input type = 'text' [(ngModel)] = 'title' />
+
+<!-- Directives -->
+<!-- SAC = structural , attribute, component -->
+<app-heroes></app-heroes>
+
+
